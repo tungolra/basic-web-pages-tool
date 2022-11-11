@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.page {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  background-color: #5995da;
+  height: 80px;
+}
+
+.header {
+  background-color: #b2d6ff;
+}
+
+.content {
+  background-color: #eaedf0;
+  height: 600px;
+}
+
+.sign-up {
+  background-color: #d6e9fe;
+}
+
+.feature-1 {
+  background-color: #f5cf8e;
+}
+
+.feature-2 {
+  background-color: #f09a9d;
+}
+
+.feature-3 {
+  background-color: #c8c6fa;
+}
+/* Fluid layouts let us target a range of screen widths instead of specific mobile devices */
+/* In other words, the exact pixel values for the min-width and max-width parameters in a media 
+  query (collectively known as the “breakpoints” for a responsive website) don’t actually matter. 
+  Our website doesn’t care about the specific device the user is on. All it needs to know is that it 
+  should display a layout that looks pretty at 400 pixels wide (or whatever). */
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+  body {
+    background-color: #f09a9d; /* Red */
+  }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  body {
+    background-color: #f5cf8e; /* Yellow */
+  }
+  .sign-up,
+  .feature-1,
+  .feature-2,
+  .feature-3 {
+    width: 50%;
+  }
+}
+
+/* Desktop Styles */
+/* the Sign Up and Content boxes should appear underneath all the Feature sections with
+flexbox's order property. */
+@media only screen and (min-width: 961px) {
+  body {
+    width: auto;
+    
+  }
+  .page {
+    width: 960px;
+    margin: 0 auto;
+  }
+  .feature-1,
+  .feature-2,
+  .feature-3 {
+    width: 33.3%;
+  }
+  .header {
+    height: 400px;
+  }
+  .sign-up {
+    height: 200px;
+    order: 1;
+  }
+  .content {
+    order: 2;
+  }
+}

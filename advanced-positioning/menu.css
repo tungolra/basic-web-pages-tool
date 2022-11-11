@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 1200px;
+  font-size: 18px;
+  font-family: sans-serif;
+  color: #5d6063;
+}
+a:link,
+a:visited {
+  color: #5d6063;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 50px;
+  background: #D6E9FE;
+}
+.menu { 
+    margin-top: 15px;
+}
+.menu > li {
+    display: inline;
+    margin-right: 50px;
+}
+/* adds margins to all the list items, but removes it from the final <li> using the 
+:last-of-type pseudo-class. */
+.menu > li:last-of-type { 
+    margin-right: 0;
+}
+.dropdown:hover .features-menu { 
+    display: flex;
+    flex-direction: column;
+    background: #B2D6FF;
+    border-radius: 5px;
+    padding-top: 60px;
+
+    position: absolute;
+    top: -25px;
+    left: -30px;
+    z-index: 1;
+
+}
+.features-menu {
+    display: none;
+}
+.features-menu li { 
+    list-style: none;
+    border-bottom: 1px solid #FFF;
+    padding: 0 40px 10px 20px; 
+    margin: 10px;
+}
+.features-menu li:last-of-type { 
+    border-bottom: none;
+}
+
+.dropdown {
+    position: relative;
+}
+/* The z-index property lets you control the depth of elements on the page. 
+If you think of your screen as 3D space, negative z-index values go farther into the page, 
+and positive ones come out of the page. */
+.dropdown > span {
+    z-index: 2;
+    /* Take note of that position: relative; line. It’s required because only positioned elements
+     pay attention to their z-index property */
+    position: relative;
+    cursor: pointer;
+}
+

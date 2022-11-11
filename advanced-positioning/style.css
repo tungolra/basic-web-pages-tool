@@ -1,0 +1,67 @@
+/* advanced positioning lets you say things like “Put that box 
+20 pixels above and 50 pixels to the right of its parent’s origin.”
+The vast majority of elements on a web page should be laid out 
+according to the static flow of the page. 
+ */
+ /* When an element’s position property doesn’t have a value of static, 
+ it’s called a “positioned element”.  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 1200px;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .example {
+    display: flex;
+    justify-content: space-around;
+    
+    width: 800px;
+    margin: 50px 0;
+    background-color: #D6E9FE;
+  }
+  
+  .item img {
+    display: block;
+  }
+  /* “Relative positioning” moves elements around relative to the
+  original position of the elemeent  */
+  .item-relative { 
+    position: relative;
+    /* The top and left properties measure from the original box’s 
+    top and left edges */
+    top: -30px;
+    left: -30px;
+  }
+  /* “Absolute positioning” is just like relative positioning, but the offset is relative to 
+  the entire browser window instead of the original position of the element. */
+  /* using absolute removes the element from the space it occupies, allowing surrounding elements to
+  fill it in if that is how its justify-content is set up */
+  .item-absolute { 
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  /* This is how we safely combine absolute positioning with static positioning: making the item's 
+  parent element position relative */
+  .absolute { 
+    position: relative;
+  }
+  /* with fixed positioning, the element is removed from the normal flow of the page, and the 
+  coordinate system is relative to the entire browser window. The key difference is that fixed 
+  elements don’t scroll with the rest of the page. */
+  .item-fixed { 
+    /* This lets you create navigation bars that always stay on the screen, 
+    as well as those annoying pop-up banners that never go away. */
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }

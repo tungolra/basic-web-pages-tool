@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* @media only screen and (max-width: 800px) {
+  .menu-container,
+  .menu,
+  .header-container,
+  .header,
+  .photo-grid-container,
+  .photo-grid,
+  .footer > .footer-item {
+    width: 50%;
+    height: 50%;
+  }
+} */
+
+.menu-container {
+  color: #fff;
+  background-color: #5995da;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+.menu {
+
+  width: 900px;
+  display: flex;
+  /* the space-around value spreads its items out 
+    across its entire width. */
+  justify-content: space-between;
+}
+/* .links {
+  display: flex;
+  border: 1px solid white; 
+  justify-content: flex-end;
+} */
+.login {
+  margin-left: 20px;
+}
+.header-container {
+  color: #5995da;
+  background-color: #d6e9fe;
+  display: flex;
+  justify-content: center;
+}
+/* Since .header has an explicit height, items 
+can be positioned vertically inside of it. */
+.header {
+  width: 900px;
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+  /* Vertical alignment is defined by adding 
+    an align-items property to a flex container. */
+  align-items: center;
+}
+.photo-grid-container {
+  display: flex;
+  justify-content: center;
+}
+.photo-grid {
+  width: 900px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+}
+.photo-grid-item {
+  border: 1px solid white;
+  width: 300px;
+  height: 300px;
+}
+
+first-item {
+  order: 1;
+}
+.last-item {
+  order: -1;
+}
+.social,
+.subscribe {
+  align-self: flex-end;
+  margin-bottom: 20px;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-item {
+  border: 1px solid white;
+  background-color: #d6e9fe;
+  height: 200px;
+  /* That flex: 1; line tells the items to stretch to match 
+the width of .footer. */
+  flex: 1;
+}
+.footer-three {
+  flex: 2;
+}
+.footer-one,
+.footer-three {
+  background-color: #5995da;
+  flex: initial;
+  width: 300px;
+}
+.signup {
+  margin-left: auto;
+}

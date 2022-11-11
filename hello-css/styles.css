@@ -1,0 +1,28 @@
+body {
+    color: #5b5757;
+    background-color: lightgrey;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    font-size:  28px;
+  }
+  ul {
+    list-style-type: square;
+  }
+  
+  ol {
+    list-style-type: lower-roman;
+  }
+  a {
+    text-decoration: none;
+  }
+  p {
+    text-align: left;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-weight: normal;  
+  }

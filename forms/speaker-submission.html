@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Speaker Submission</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="speaker-form-header">
+      <h1>Speaker Submission</h1>
+      <p><em>Want to speak at our fake conference? Fill out this form.</em></p>
+    </header>
+    <!-- The action attribute defines the URL that processes the form
+    This is typically a special URL defined by your web server that knows
+     how to process the data. -->
+    <!-- The method attribute can be either post or get, both of which 
+        define how the form is submitted to the backend server. -->
+    <!-- use 'post' when you’re changing data on the server, 
+        reserving 'get' for when you’re only getting data. -->
+    <form action="" method="get" class="speaker-form">
+      <div class="form-row">
+        <!-- A label’s for attribute must match the id attribute of its 
+            associated <input/> element. -->
+        <label for="full-name">Name</label>
+        <!-- Remember that ID selectors are bad—the id attribute here is 
+            only for connecting it to a <label> element -->
+        <input id="full-name" name="full-name" type="text" />
+      </div>
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="joe@example.com"
+        />
+      </div>
+      <!-- we not only need a label for each <input/> element, but also a way 
+        to group radio buttons and label the entire group. This is what the <fieldset> 
+            and <legend> elements are for -->
+      <fieldset class="legacy-form-row">
+        <legend>Type of Talk</legend>
+        <input
+          id="talk-type-1"
+          name="talk-type"
+          type="radio"
+          value="main-stage"
+        />
+        <!-- It’s also very important that each radio button has the same name attribute, 
+            otherwise the form wouldn’t know they were part of the same group. -->
+        <label for="talk-type-1" class="radio-label">Main Stage</label>
+        <input
+          id="talk-type-2"
+          name="talk-type"
+          type="radio"
+          value="workshop"
+          checked
+        />
+        <!-- checked is a boolean attribute that makes the workshop element the default selection -->
+        <label for="talk-type-2" class="radio-label">Workshop</label>
+      </fieldset>
+      <div class="form-row">
+        <label for="t-shirt">T-Shirt Size</label>
+        <select id="t-shirt" name="t-shirt">
+          <option value="xs">Extra Small</option>
+          <option value="s">Small</option>
+          <option value="m">Medium</option>
+          <option value="l">Large</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="abstract">Abstract</label>
+        <textarea id="abstract" name="abstract"></textarea>
+        <div class="instructions">Describe your talk in 500 words or less</div>
+      </div>
+      <div class="form-row">
+        <label class="checkbox-label" for="available">
+          <input
+            id="available"
+            name="available"
+            type="checkbox"
+            value="is-available"
+          />
+          <span>I’m actually available the date of the talk</span>
+        </label>
+        <div class='form-row'>
+            <button>Submit</button>
+          </div>
+    </form>
+    </div>
+  </body>
+</html>

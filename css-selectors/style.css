@@ -1,0 +1,84 @@
+.synopsis {
+  color: lightgrey;
+  font-style: italic;
+}
+.synopsis em {
+  font-style: normal;
+}
+.button:link,
+.button:visited {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  background-color: #5995da; /* Blue */
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid #5d6063; /* Dark gray */
+  border-radius: 5px;
+
+  width: 200px;
+  margin: 20px auto;
+}
+.button:hover,
+.button:visited:hover {
+  color: #fff;
+  background-color: lightblue;
+}
+.button:active,
+.button:visited:active {
+  color: #fff;
+  background-color: blue;
+}
+.page {
+  width: 600px;
+  margin: 0 auto;
+}
+.call-to-action:link,
+.call-to-action:visited {
+  font-style: italic;
+  background-color: rgba(228, 228, 38, 0.796);
+}
+.call-to-action:hover,
+.call-to-action:visited:hover {
+    background-color: lightyellow;
+}
+.call-to-action:active,
+.call-to-action:visited:active {
+    background-color: #EEB75A;
+}
+a:link {
+  color: blue;
+  text-decoration: none;
+}
+a:visited {
+  color: purple;
+}
+a:hover {
+  color: aqua;
+  text-decoration: underline;
+}
+a:active {
+  color: red;
+}
+
+/* This creates a dedicated hover style for visited links. 
+Hovering over an unvisited link changes it to aqua, while 
+hovering over a visited link will turn it orange.  */
+a:visited:hover {
+  color: orange;
+}
+a:visited:active {
+  color: red;
+}
+/* we could use :last-of-type to add some space after the 
+last paragraph of our example page/ This avoids selecting 
+the first two <p> elements without requiring a new class 
+attribute on the last paragraph*/
+p:last-of-type{
+    margin-bottom: 50px;
+}
+/* p:first-of-type {
+    color: #7E8184;
+    font-style: italic;
+  } */

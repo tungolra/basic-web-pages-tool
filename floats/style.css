@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.menu {
+  height: 100px;
+  background-color: mediumblue;
+}
+.sidebar {
+  height: 300px;
+  background-color: red;
+  width: 200px;
+  float: left;
+}
+.content {
+  height: 500px;
+  background-color: yellow;
+  width: 650px;
+  float: left;
+  padding: 20px;
+}
+.article-image {
+    float: left;
+    width: 300px;
+    height: 200px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    margin-bottom: 20px;
+  }
+.footer {
+  /* “Clearing” a float is when we tell a block to ignore 
+    any floats that appear before it. Instead of flowing 
+    around the floated box, a cleared element always appears 
+    after any floats. It’s like forcing a box back into the 
+    default vertical flow of the page. */
+  overflow: hidden;
+  background-color: #d6e9fe;
+}
+.page {
+  width: 900px;
+  margin: 0 auto;
+
+  /* By adding an overflow: hidden declaration to a container 
+    div, we’re telling it to recognize the height of any floated 
+    elements it contains. This is how we can add a background color 
+    to our .page element and have it actually render */
+}
+/* Next, we want to make our .page background fill the entire browser
+ window without changing the alignment of our sidebar or content blocks. 
+ The problem is, our .page is busy centering everything—we can’t use it 
+ for a full-bleed background because centering requires an explicit width 
+ property. It’s time for another container div.*/
+.container {
+  overflow: hidden;
+  background-color: #eaedf0;
+}
+.footer-item {
+  float: left;
+  /* Percentages in CSS are relative to the width of the parent element. 
+    The result is three columns that automatically resize to one-third of 
+    the browser window */
+  width: 31%;
+  margin: 20px 1.15%;
+  height: 160px;
+  background-color: #b2d6ff; /* Medium blue */
+}
+
+.avatar { 
+    float: left;
+    width: 60px;
+    height: 60px;
+    margin: 25px;
+    border-radius: 40px;
+    background-color: #d6e9fe;
+}
+.username { 
+    margin-top: 30px;
+
+}
+.comment { 
+    margin: 10px;
+    overflow: hidden;
+}
